@@ -19,3 +19,21 @@ document.getElementById("calculate-button").addEventListener('click',function(){
     
 })
 
+// Savings section functions 
+function savingAmount(){
+    const saveByPercent = document.getElementById('save-percent').value;
+    const incomeTotal = document.getElementById('income-recieved').value;
+    let savingTotal = (parseInt(incomeTotal)* parseInt(saveByPercent))/100;
+    return savingTotal;
+}
+function remainingBalance (){
+    const incomeTotal = document.getElementById('income-recieved').value;
+    let remainingBalanceTotal = parseInt(incomeTotal) - savingAmount();
+    return remainingBalanceTotal;
+}
+// save button
+document.getElementById("calculate-saving").addEventListener('click',function(){
+    document.getElementById('saving-amount').innerText = savingAmount();
+    document.getElementById('remaining-balance').innerText = remainingBalance();
+    
+})
