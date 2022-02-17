@@ -11,22 +11,46 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <section>
+        <!-- Heading here -->
+        <header>
             <h1 class="heading-title text-4xl font-semibold text-emerald-600 text-center my-8">Balance Calculation</h1>
-        </section>
-        <section class="container mx-auto grid grid-cols-2">
+        </header>
+        <!-- main section start -->
+        <main>
+        <section class="container mx-auto grid md:grid-cols-2 sm:grid-cols-1">
+            <!-- Cover image here -->
             <div class="cover-section">
-                <img class=" " src="images/2.jpg" alt="" srcset="">
+                <img class=" " src="images/1.jpg" alt="" srcset="">
             </div>
+            <!-- balance statements here -->
             <div class="info-section py-8 bg-sky-50">
+                <!-- income field -->
                 <div class="income-part flex flex-col justify-center items-center">
-                    <h2 class="text-2xl font-semibold text-center">Income</h2>
-                    <div class="mt-4">
-                        <h3 class="inline-block self-center text-xl text-center">Income</h3>
-                        <input id="income-received" class="ml-4 w-3/5" type="number">
+                    <h2 class="text-2xl font-semibold text-center mb-4">Income</h2>
+                    <div class="mx-auto grid grid-cols-3">
+                        <div><h3 class="text-xl text-right">Income</h3></div>
+                        <div><input id="income-recieved" class="rounded ml-4 w-full" type="number"></div>
                     </div>
                 </div>
+                <!-- expense field start -->
+                <div class="expenses-part flex flex-col justify-center items-center">
+                    <h2 class="text-2xl font-semibold text-center my-4">Expenses</h2>
+                    <div class="mx-auto grid grid-cols-3 mt-2">
+                        <div><h3 class="text-xl text-right">Food:</h3></div>
+                        <div><input id="food-expense" class="rounded ml-4 w-full" type="number"></div>
+                    </div>
+                    <div class="mx-auto grid grid-cols-3 mt-2">
+                        <div><h3 class="text-xl text-right">Rent:</h3></div>
+                        <div><input id="rent-expense" class="rounded ml-4 w-full" type="number"></div>
+                    </div>
+                    <div class="mx-auto grid grid-cols-3 mt-2">
+                        <div><h3 class="text-xl text-right">Clothes:</h3></div>
+                        <div><input id="clothes-expense" class="rounded ml-4 w-full" type="number"></div>
+                    </div>
+                </div>
+                <section class="calculation-part flex flex-col justify-center items-center mt-4">
+                    <button id="calculate-button" class="text-xl bg-emerald-600 font-semibold text-white px-4 py-2 rounded">Calculate</button>
+                </section>
             </div>
         </section>
     </main>
