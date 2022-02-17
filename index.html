@@ -17,13 +17,13 @@
         </header>
         <!-- main section start -->
         <main>
-        <section class="container mx-auto grid md:grid-cols-2 sm:grid-cols-1">
+        <section class="container md:px-6 mx-auto grid md:grid-cols-2 sm:grid-cols-1">
             <!-- Cover image here -->
             <div class="cover-section">
                 <img class=" " src="images/1.jpg" alt="" srcset="">
             </div>
             <!-- balance statements here -->
-            <div class="info-section py-8 bg-sky-50">
+            <div class="info-section py-8 md:w-11/12 sd:w-full ml-auto bg-green-50">
                 <!-- income field -->
                 <div class="income-part flex flex-col justify-center items-center">
                     <h2 class="text-2xl font-semibold text-center mb-4">Income</h2>
@@ -48,8 +48,17 @@
                         <div><input id="clothes-expense" class="rounded ml-4 w-full" type="number"></div>
                     </div>
                 </div>
+                <!-- calculating part of balance -->
                 <section class="calculation-part flex flex-col justify-center items-center mt-4">
                     <button id="calculate-button" class="text-xl bg-emerald-600 font-semibold text-white px-4 py-2 rounded">Calculate</button>
+                    <div class="mx-auto grid grid-cols-2 mt-4">
+                        <div><h3 class="text-xl  font-semibold">Total Expenses:</h3></div>
+                        <div><h3 class="text-xl  font-semibold ml-4" id="total-expense">00</h3></div>
+                    </div>
+                    <div class="mx-auto grid grid-cols-2 mt-2">
+                        <div><h3 class="text-xl  font-semibold">Balance:</h3></div>
+                        <div><h3 class="text-xl  font-semibold ml-4" id="total-balance">00</h3></div>
+                    </div>
                 </section>
             </div>
         </section>
