@@ -94,8 +94,6 @@ const phoneDetails = (details) => {
     detailDiv.innerHTML = `
         <div class="product-detail rounded shadow" >
             <div>
-            <i onclick="productDetailClose()" class="icon fa-solid fa-circle-xmark" id="icon"></i>
-                <div class="product-detail-left">
                     <img src="${details.image}" class="img-fluid">
                     <h4 class="text-primary mt-3">${details.name}</h4>
                     <p class="text-secondary text-center">
@@ -105,29 +103,24 @@ const phoneDetails = (details) => {
                 
             </div>
             <div class="product-detail-middle">
-                <h5 ><b><u>Main Features:</u></b> </h5>
-                <p><b>Storage: </b><span>${details.mainFeatures ? details.mainFeatures.storage : 'No Information Found!'}</span></p>
-                <p><b>Display Size: </b><span>${details.mainFeatures ? details.mainFeatures.displaySize : 'No Information Found!'}</span></p>
-                <p><b>Chipset: </b><span>${details.mainFeatures ? details.mainFeatures.chipSet : 'No Information Found!'}</span></p>
-                <p><b>Memory: </b><span>${details.mainFeatures ? details.mainFeatures.memory : 'No Information Found!'}</span></p>
-                <p><b>Sensors: </b><span>${details.mainFeatures ? details.mainFeatures.sensors : 'No Information Found!'}</span></p>
+                <h5 class="main-color"><b>Main Features:</b> </h5>
+                <p><b>Storage: </b><span>${details.mainFeatures ? details.mainFeatures.storage : 'No Information Available'}</span></p>
+                <p><b>Display Size: </b><span>${details.mainFeatures ? details.mainFeatures.displaySize : 'No Information Available'}</span></p>
+                <p><b>Chipset: </b><span>${details.mainFeatures ? details.mainFeatures.chipSet : 'No Information Available'}</span></p>
+                <p><b>Memory: </b><span>${details.mainFeatures ? details.mainFeatures.memory : 'No Information Available'}</span></p>
+                <p><b>Sensors: </b><span>${details.mainFeatures ? details.mainFeatures.sensors : 'No Information Available'}</span></p>
             </div>
 
             <div class="product-detail-right">
-                <h5><b><u>Other Features:</u></b> </h5>
-                <p><b>WLAN: </b><span>${details.others ? details.others.WLAN : 'No Information Found!'}</span></p>
-                <p><b>Bluetooth: </b><span>${details.others ? details.others.Bluetooth : 'No Information Found!'}</span></p>
-                <p><b>GPS: </b><span>${details.others ? details.others.GPS : 'No Information Found!'}</span></p>
-                <p><b>NFC: </b><span>${details.others ? details.others.NFC : 'No Information Found!'}</span></p>
-                <p><b>Radio: </b><span>${details.others ? details.others.Radio : 'No Information Found!'}</span></p>
-                <p><b>USB: </b><span>${details.others ? details.others.USB : 'No Information Found!'}</span></p>
+                <h5><b>Other Features: </b> </h5>
+                <p><b>WLAN: </b><span>${details.others ? details.others.WLAN : 'No Information Available'}</span></p>
+                <p><b>Bluetooth: </b><span>${details.others ? details.others.Bluetooth : 'No Information Available'}</span></p>
+                <p><b>GPS: </b><span>${details.others ? details.others.GPS : 'No Information Available'}</span></p>
+                <p><b>NFC: </b><span>${details.others ? details.others.NFC : 'No Information Available'}</span></p>
+                <p><b>Radio: </b><span>${details.others ? details.others.Radio : 'No Information Available'}</span></p>
+                <p><b>USB: </b><span>${details.others ? details.others.USB : 'No Information Available'}</span></p>
             </div>
         </div>
     `
     detailSection.appendChild(detailDiv);
-}
-
-// phone details window close function
-const productDetailClose = () => {
-    document.getElementById('product-details').textContent = '';
 }
