@@ -80,3 +80,54 @@ const searchPhone = (phones) => {
         })
     }
 }
+
+const getPhone = (id) => {
+    fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+        .then(response => response.json())
+        .then(data => phoneDetails(data.data))
+}
+
+const phoneDetails = (details) => {
+    document.getElementById('results-section').style.display = 'none';
+    detailSection.textContent = '';
+    const detailDiv = document.createElement('div');
+    detailDiv.innerHTML = `
+        <div class="product-detail rounded shadow" >
+            <div>
+            <i onclick="productDetailClose()" class="icon fa-solid fa-circle-xmark" id="icon"></i>
+                <div class="product-detail-left">
+                    <img src="${details.image}" class="img-fluid">
+                    <h4 class="text-primary">${details.name}</h4>
+                    <p class="text-danger text-center">
+                        ${details.releaseDate ? details.releaseDate : "No Release Date Found!!!"}
+                    </p>
+                </div>
+                
+            </div>
+            <div class="product-detail-middle">
+                <h5 ><b><u>Main Features:</u></b> </h5>
+                <p><b>Storage: </b><span>${details.mainFeatures ? details.mainFeatures.storage : 'No Information Found!'}</span></p>
+                <p><b>Display Size: </b><span>${details.mainFeatures ? details.mainFeatures.displaySize : 'No Information Found!'}</span></p>
+                <p><b>Chipset: </b><span>${details.mainFeatures ? details.mainFeatures.chipSet : 'No Information Found!'}</span></p>
+                <p><b>Memory: </b><span>${details.mainFeatures ? details.mainFeatures.memory : 'No Information Found!'}</span></p>
+                <p><b>Sensors: </b><span>${details.mainFeatures ? details.mainFeatures.sensors : 'No Information Found!'}</span></p>
+            </div>
+
+            <div class="product-detail-right">
+                <h5><b><u>Other Features:</u></b> </h5>
+                <p><b>WLAN: </b><span>${details.others ? details.others.WLAN : 'No Information Found!'}</span></p>
+                <p><b>Bluetooth: </b><span>${details.others ? details.others.Bluetooth : 'No Information Found!'}</span></p>
+                <p><b>GPS: </b><span>${details.others ? details.others.GPS : 'No Information Found!'}</span></p>
+                <p><b>NFC: </b><span>${details.others ? details.others.NFC : 'No Information Found!'}</span></p>
+                <p><b>Radio: </b><span>${details.others ? details.others.Radio : 'No Information Found!'}</span></p>
+                <p><b>USB: </b><span>${details.others ? details.others.USB : 'No Information Found!'}</span></p>
+            </div>
+        </div>
+    `
+    detailSection.appendChild(detailDiv);
+}
+
+// phone details window close function
+const productDetailClose = () => {
+    document.getElementById('product-details').textContent = '';
+}
