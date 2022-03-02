@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 /* title  */
 .heading-title {
@@ -74,7 +74,11 @@
   display: none;
 }
 
-/* media query for mobile devices only */
+.main-color {
+  color: darkslategray;
+}
+
+/* media query for mobile */
 @media only screen and (max-width: 480px) {
   .search {
     display: grid;

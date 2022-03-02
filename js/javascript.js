@@ -112,7 +112,7 @@ const phoneDetails = (details) => {
             </div>
 
             <div class="product-detail-right">
-                <h5><b>Other Features: </b> </h5>
+                <h5 class="main-color"><b>Other Features: </b> </h5>
                 <p><b>WLAN: </b><span>${details.others ? details.others.WLAN : 'No Information Available'}</span></p>
                 <p><b>Bluetooth: </b><span>${details.others ? details.others.Bluetooth : 'No Information Available'}</span></p>
                 <p><b>GPS: </b><span>${details.others ? details.others.GPS : 'No Information Available'}</span></p>
