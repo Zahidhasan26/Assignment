@@ -43,7 +43,7 @@
 }
 
 .brand_name {
-  color: darkolivegreen;
+  color: #0275d8;
 }
 /* product details section */
 .product-detail {
@@ -68,8 +68,8 @@
   font-size: 35px;
 }
 
-.results-number-section {
-  color: red;
+.results-section {
+  color: #0275d8;
   font-weight: bold;
   display: none;
 }
