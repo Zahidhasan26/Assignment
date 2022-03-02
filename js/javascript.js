@@ -97,9 +97,9 @@ const phoneDetails = (details) => {
             <i onclick="productDetailClose()" class="icon fa-solid fa-circle-xmark" id="icon"></i>
                 <div class="product-detail-left">
                     <img src="${details.image}" class="img-fluid">
-                    <h4 class="text-primary">${details.name}</h4>
-                    <p class="text-danger text-center">
-                        ${details.releaseDate ? details.releaseDate : "No Release Date Found!!!"}
+                    <h4 class="text-primary mt-3">${details.name}</h4>
+                    <p class="text-secondary text-center">
+                        ${details.releaseDate ? details.releaseDate : "Release Date Unknown"}
                     </p>
                 </div>
                 
