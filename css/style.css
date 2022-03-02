@@ -1,7 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
-body {
-  font-family: "Source Sans Pro", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
 }
+/* title  */
 .heading-title {
-  font-family: "Source Sans Pro", sans-serif;
+  color: darkslategray;
+}
+/* search box */
+.search-box {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin-bottom: 5%;
+  width: 40%;
+}
+/* search box button */
+.button {
+  width: 120px;
+  margin-left: 10%;
+}
+
+/* error message */
+.no-search-result {
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+  display: none;
+}
+/*error message */
+.empty-inputField {
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+  display: none;
+}
+/* search result section */
+.search-results {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+}
+
+.brand_name {
+  color: darkolivegreen;
+}
+/* product details section */
+.product-detail {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  padding: 20px;
+  margin-bottom: 5%;
+}
+
+.product-detail-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: darkolivegreen;
+  font-size: 35px;
+}
+
+.results-number-section {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+/* media query for mobile devices only */
+@media only screen and (max-width: 480px) {
+  .search {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0, 20px;
+    width: 100%;
+  }
+
+  .button {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .search-results {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+    place-items: center;
+  }
+
+  .product-detail {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 5%;
+    padding: 20px;
+  }
+
+  .product-detail-left {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .icon {
+    color: darkolivegreen;
+    font-size: 25px;
+  }
+
+  .product-detail-middle p {
+    font-size: 12px;
+  }
+
+  .product-detail-right p {
+    font-size: 12px;
+  }
 }
